@@ -47,24 +47,33 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 4rem;
+}
+header, section{
+    padding: 4% 0;
+}
 nav{
     display: flex;
     justify-content: space-between;
 }
 .topsection{
-    display: flex;
-    justify-content: center;
-}
-.image-button{
     background-image: url("https://i.picsum.photos/id/1019/5472/3648.jpg?hmac=2mFzeV1mPbDvR0WmuOWSiW61mf9DDEVPDL0RVvg1HPs");
     background-repeat: no-repeat;
     background-size: cover;
-    color: gold;
-    font-size: large;
-    width: 600px;
-    height: 400px;
-    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    text-align: center;
 }
+
 footer{
     background-color: lightgray;
     padding: 20px;
@@ -73,8 +82,12 @@ footer{
 .row{
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-evenly;
-    padding: 20px;
+}
+.row div{
+    width: 30%;
+    margin: 2% 0;
 }
 .portfolio-element{
     text-align: center;
@@ -93,4 +106,34 @@ button:hover{
 button a{
     text-decoration: none;
     color: inherit;
+}
+
+@media(max-width:800px){
+
+}
+
+@media(max-width:500px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .links button{
+        width: 40%;
+        margin: 1% 0;
+    }
+    .topsection{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .row div{
+        width: 40%;
+    }
 }
